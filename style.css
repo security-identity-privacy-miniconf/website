@@ -1,0 +1,17 @@
+body {
+  font-size: 120%;
+  font-family: sans-serif;
+}
+
+a, a:visited, a:active, a:hover {
+  color: #006600;
+}
+
+blockquote {
+  border-left: 8px solid #006600;
+  border-right: 8px solid #006600;
+  padding: 1rem;
+  margin: 3rem 2rem;
+  font-style: italic;
+  background-color: #ddffdd;
+}
