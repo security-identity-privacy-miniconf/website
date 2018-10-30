@@ -7,11 +7,61 @@ a, a:visited, a:active, a:hover {
   color: #006600;
 }
 
-blockquote {
+h1 {
+  text-align: center;
+}
+
+h2, h3, p {
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+
+div.introduction {
+    max-width: 980px;
+    margin: 0 auto;
+}
+div.introduction p {
   border-left: 8px solid #006600;
   border-right: 8px solid #006600;
-  padding: 1rem;
-  margin: 3rem 2rem;
   font-style: italic;
   background-color: #ddffdd;
+  padding: 1rem;
+  margin: 0;
+}
+
+div.content-description {
+  clear: both;
+}
+
+div.contact {
+  clear: both;
+}
+
+a.button {
+  background-color: #ddffdd;
+  padding: 3px 1rem;
+  color: #006600;
+  text-align: center;
+  border: 2px solid #006600;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+a.button:hover {
+  background-color: #006600;
+  color: #fff;
+}
+
+@media screen and (min-width: 980px) {
+  div.cfp-details, div.ticket-info {
+    float: left;
+    clear: right;
+    width: 50%;
+  }
+  div.ticket-info {
+    clear: none;
+  }
+  div.content-description div {
+    float: left;
+    width: 33%;
+  }
 }
