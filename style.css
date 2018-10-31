@@ -1,67 +1,157 @@
 body {
-  font-size: 120%;
+  --base-font-size: 20px;
+  --dark-green: #060;
+  --light-green: #dfd;
+  --margin-size: 30px;
+  --inverse-margin: calc(-1 * var(--margin-size));
+  --small-margin: 30px;
+  --very-small-margin: 20px;
+  --teeny-tiny-margin: 10px;
+  font-size: var(--base-font-size);
   font-family: sans-serif;
+  margin: var(--margin-size);
 }
 
-a, a:visited, a:active, a:hover {
-  color: #006600;
+@media (min-width: 800px) {
+  body {
+    --margin-size: 60px;
+    --small-margin: 40px;
+    --very-small-margin: 30px;
+    --teeny-tiny-margin: 20px;
+  }
+
+  .introduction {
+    max-width: 90%;
+  }
+}
+
+header {
+  background: var(--dark-green);
+  color: white;
+  padding: var(--margin-size);
+  margin: var(--inverse-margin);
+  margin-bottom: var(--small-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
+  margin: var(--base-font-size) 0;
+}
+@media (min-width: 800px) {
+  h1 {
+    text-align: center; 
+    margin-bottom: var(--margin-size);
+  }
 }
 
-h2, h3, p {
-  padding: 0rem 0.5rem 0rem 0.5rem;
+h2, p {
+  margin: var(--teeny-tiny-margin) 0;
+}
+p:not(:last-child) {
+  margin-bottom: var(--very-small-margin);
 }
 
-div.introduction {
-    max-width: 980px;
-    margin: 0 auto;
-}
-div.introduction p {
-  border-left: 8px solid #006600;
-  border-right: 8px solid #006600;
-  font-style: italic;
-  background-color: #ddffdd;
-  padding: 1rem;
+ul {
+  padding-left: 0;
   margin: 0;
+  list-style: none;
 }
 
-div.content-description {
-  clear: both;
+ul li {
+  position: relative;
+  margin-left: 20px;
+}
+ul li::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--dark-green);
+  position: absolute;
+  top: 6px;
+  left: -16px;
 }
 
-div.contact {
-  clear: both;
+section {
+  padding-bottom: var(--teeny-tiny-margin);
+}
+
+hr {
+  height: 2px;
+  background-image: radial-gradient(circle at center, var(--dark-green) 70%, transparent);
+  margin-bottom: var(--very-small-margin);
+  border: 0;
+}
+
+a {
+  color: var(--dark-green);
+}
+a:focus {
+  outline: 2px dashed var(--dark-green);
+  outline-offset: 2px;
 }
 
 a.button {
-  background-color: #ddffdd;
-  padding: 3px 1rem;
-  color: #006600;
-  text-align: center;
-  border: 2px solid #006600;
-  border-radius: 5px;
   text-decoration: none;
+  display: inline-block;
+  background: var(--dark-green);
+  color: white;
+  box-shadow: 1px 1px 4px #333;
+  padding: 10px;
+  margin: 5px 0;
+  max-width: 80%;
+}
+a.button:active {
+  box-shadow: none;
 }
 
-a.button:hover {
-  background-color: #006600;
-  color: #fff;
+.content-description {
+  background: var(--dark-green);
+  color: white;
+  margin: 0 var(--inverse-margin);
+  padding: var(--teeny-tiny-margin) 30px;
+  margin-bottom: var(--very-small-margin);
 }
 
-@media screen and (min-width: 980px) {
-  div.cfp-details, div.ticket-info {
-    float: left;
-    clear: right;
-    width: 50%;
+@media (min-width: 1200px) {
+  .topics {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
-  div.ticket-info {
-    clear: none;
+  
+  .topics > div {
+    max-width: 29%;
+    display: flex;
+    flex-direction: column;
   }
-  div.content-description div {
-    float: left;
-    width: 33%;
+
+  .topics div p:last-of-type {
+    flex-grow: 1;
   }
+
+  .topics .submit {
+    align-self: center;
+  }
+}
+
+.topics div {
+  background: white;
+  color: var(--dark-green);
+  padding: var(--teeny-tiny-margin);
+  margin: var(--very-small-margin) 0;
+}
+
+.content-description h3 {
+  margin: 0;
+}
+
+.content-description .submit {
+  text-align: center;
+}
+.content-description .submit a {
+  min-width: 12ch;
 }
