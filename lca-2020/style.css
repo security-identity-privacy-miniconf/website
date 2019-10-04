@@ -87,10 +87,10 @@ hr {
 }
 
 a {
-  color: var(--warm-yellow);
+  color: var(--beachy-blue);
 }
 a:focus {
-  outline: 2px dashed var(--warm-yellow);
+  outline: 2px dashed currentColor;
   outline-offset: 2px;
 }
 
@@ -141,6 +141,7 @@ a.button:active {
   background: white;
   padding: var(--teeny-tiny-margin);
   margin: var(--very-small-margin) 0;
+  border-radius: 5px;
 }
 
 .content-description h3 {
