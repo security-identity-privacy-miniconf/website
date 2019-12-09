@@ -172,37 +172,31 @@ a.button:active {
   min-width: 12ch;
 }
 
-section.speakers li {
-  margin-bottom: 1rem;
+.speakers .container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-section.speakers li::before {
-  content: '';
-  display: inherit;
-  width: auto;
-  height: auto;
-  background: none;
-  position: inherit;
-  top: auto;
-  left: auto;
+.speakers .item {
+  flex-basis: 20em;
+  flex-grow: 1;
+  margin: 0.5em;
+  border: 1px solid #888;
+  border-radius: 0 1em 1em 0;
+  overflow: hidden;
+  padding-left: 0.5em;
 }
 
-section.speakers img {
-  display: inline-block;
-  border-radius: 100px;
+.speakers .title {
+  font-weight: bold;
+  margin: 0.5em 0 0 0;
 }
 
-section.speakers p {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 120%;
-  margin-left: 1rem;
+.speakers .speaker {
+  margin: 0.5em 0 0 0;
 }
 
-section.speakers p span {
-  display: none;
-}
-
-section.speakers p strong {
-  display: block;
+.speakers img {
+  float: right;
+  margin-left: 0.5em;
 }
