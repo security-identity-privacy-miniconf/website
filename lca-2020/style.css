@@ -21,10 +21,6 @@ body {
     --teeny-tiny-margin: 20px;
   }
 
-  .introduction {
-    max-width: 90%;
-  }
-
   header .image {
     float: right;
     max-width: 40%;
@@ -32,9 +28,16 @@ body {
   }
 }
 
+@media (min-width: 1515px) {
+  header a.button {
+    width: 60% !important;
+  }
+}
+
 header {
   background: var(--warm-yellow);
   padding: var(--margin-size);
+  padding-bottom: 0;
   margin: var(--inverse-margin);
   margin-bottom: var(--small-margin);
   display: flex;
@@ -123,6 +126,13 @@ a.button {
 }
 a.button:active {
   box-shadow: none;
+}
+header a.button {
+  margin-top: calc(var(--margin-size) / 2);
+  margin-bottom: calc(var(--margin-size) / 2);
+  width: 100%;
+  max-width: inherit;
+  text-align: center;
 }
 
 .content-description {
