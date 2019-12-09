@@ -174,7 +174,7 @@ a.button:active {
 
 .speakers .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22em, auto));
+  grid-template-columns: repeat(auto-fit, minmax(24em, auto));
 }
 
 .speakers .item {
